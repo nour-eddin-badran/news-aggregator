@@ -7,6 +7,17 @@ A sophisticated News Aggregator built on Laravel, offering a seamless blend of r
 * [New York Times](https://developer.nytimes.com/apis)
 * [The Guardian](https://open-platform.theguardian.com/documentation/)
 
+## Technologies Used
+
+The project is developed using the following technologies:
+
+- **PHP:** Version 8.2
+- **Laravel:** Version 10.33.0
+- **MariaDB:** Version 10
+- **Elasticsearch:** Version 7.10.0
+- **Kibana:** Version 7.10.0
+- **Docker:** Used for containerization
+
 ## Installation & Preparing the environment
 Follow these steps in the specified order:
 
@@ -23,7 +34,7 @@ Run migrations and seed the database
 docker exec -ti news-aggregator-laravel.test-1  php artisan migrate:fresh --seed
 ``` 
 
-## Now the project is working correctly, 
+## Now the project is working correctly,
 The scheduled scraping command is configured to run daily at 05:00 AM. It extracts data from various news providers and sources, scraping articles from the previous day each day.
 
 To run the command manually:
@@ -43,7 +54,7 @@ A concise overview of the methodology adopted in developing the application:
 
 * Utilizing the strategy design pattern, three distinct news providers have been successfully implemented. This approach provides flexibility to extend the system and incorporate additional providers easily.
 ### Main Business Logic
-The main business logic is located in the following namespace: 
+The main business logic is located in the following namespace:
 
 ```
 App\Modules\NewsProviders
